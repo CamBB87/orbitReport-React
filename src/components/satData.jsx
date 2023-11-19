@@ -14,7 +14,7 @@ const satData = [
      launchDate: "2009-08-17",
      orbitType: "Medium",
      operational: true
-   },
+   }, 
    {
      id: 3,
      name: "Vanguard 1",

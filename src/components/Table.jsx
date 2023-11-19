@@ -6,19 +6,19 @@ const Table = ({ sat }) => {
     <table>
       <thead>
         <tr>
-          <th>name</th>
+          <th>Name</th>
           <th>Type of Satellite</th>
           <th>Launch Date</th>
           <th>Status</th>
         </tr>
       </thead>
       <tbody>
-        {sat.map(({ id, data }) =>  (
-          <tr key={id}>
+        {sat.map((data) =>  (
+          <tr key={data.id}>
             <td>{data.name}</td>
             <td>{data.orbitType}</td>
             <td>{data.launchDate}</td>
-            <td>{data.operational ? 'Active' : 'Inactive'}</td>
+            <td style={{color: data.operational ? 'green' : 'red'}}>{data.operational ? 'Active' : 'Inactive'}</td>
           </tr>
         ))}
       </tbody>
